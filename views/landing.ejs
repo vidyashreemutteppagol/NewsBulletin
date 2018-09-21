@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+<div class="mb-2"></div>
+
+<!-- Display News items with title and publisher as Cards -->
+<% newsdata.forEach(function(news){ %>
+    <div class="card w-100 text-white bg-dark mb-3">
+        <div class="card-body">
+            <h5 class="card-title">
+                <a target="_blank" rel="noopener noreferrer" href="<%= news.articleLink %>" id="article-title"><%= news.articleTitle %></a>
+            </h5>
+            <p class="card-text">
+                <a target="_blank" rel="noopener noreferrer" href="http://<%= news.publisherLink %>" id="publisher"><%= news.publisher %></a>
+            </p>
+        </div>
+    </div>
+<% }); %>
+
+</div>
+
+<% include ./partials/footer %>
